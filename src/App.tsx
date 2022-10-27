@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useLayoutEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import classes from './App.module.css';
+import Header from './components/Header/Header';
+import Menu from './components/Menu/Menu';
+import News from './components/News/News';
+import SeachAddress from './components/SeachAddress/SeachAddress';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [openMenu, setOpenMenu] = useState(true)
+
+    useLayoutEffect(() => {
+        const windowInnerWidth = window.innerWidth
+        if (windowInnerWidth <= 768) setOpenMenu(false)
+    }, [])
+
+    return (
+        <div className={classes.container}>
+            <BrowserRouter>
+                <Header setOpenMenu={setOpenMenu} />
+                <section className={classes.body}>
+                    {openMenu && <Menu />}
+                    <section className={classes.content}>
+                        <Routes>
+                            <Route path='/' element={<News />} />
+                            <Route path='/address' element= {<SeachAddress/>} />
+                        </Routes>
+                    </section>
+                </section>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;

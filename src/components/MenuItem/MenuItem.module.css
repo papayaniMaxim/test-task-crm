@@ -1,0 +1,38 @@
+.text{
+    position: relative;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: black;
+    padding-left:80px;
+    padding-right: 20px; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+.text:hover{
+    background: #5027bf19;
+}
+.icon{
+    position: absolute;
+    left: 32px;
+}
+
+.submenu{
+    padding-left: 32px;
+}
+.marker{
+    position: absolute;
+    right: 0;
+    top:2px;
+    bottom: 2px;
+    width: 3px;
+    background: #4F27BF;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.shevronUp{
+    transform: rotate(180deg);
+}
