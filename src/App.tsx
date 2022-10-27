@@ -1,5 +1,5 @@
 import { useLayoutEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import classes from './App.module.css';
 import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
@@ -16,7 +16,7 @@ function App() {
 
     return (
         <div className={classes.container}>
-            <BrowserRouter>
+            <HashRouter>
                 <Header setOpenMenu={setOpenMenu} />
                 <section className={classes.body}>
                     {openMenu && <Menu />}
@@ -27,7 +27,7 @@ function App() {
                         </Routes>
                     </section>
                 </section>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 }
