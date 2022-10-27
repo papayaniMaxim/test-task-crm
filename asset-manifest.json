@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test-task-crm/static/css/main.a55c6bd6.css",
+    "main.js": "/test-task-crm/static/js/main.ef846442.js",
+    "index.html": "/test-task-crm/index.html",
+    "main.a55c6bd6.css.map": "/test-task-crm/static/css/main.a55c6bd6.css.map",
+    "main.ef846442.js.map": "/test-task-crm/static/js/main.ef846442.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a55c6bd6.css",
+    "static/js/main.ef846442.js"
+  ]
+}
