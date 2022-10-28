@@ -7,19 +7,18 @@ import News from './pages/News/News';
 import SeachAddress from './pages/SeachAddress/SeachAddress';
 
 function App() {
-    const [openMenu, setOpenMenu] = useState(true)
-
-    useLayoutEffect(() => {
-        const windowInnerWidth = window.innerWidth
-        if (windowInnerWidth <= 768) setOpenMenu(false)
-    }, [])
+    
+    const windowInnerWidth = window.innerWidth
+    const initialMenuState = windowInnerWidth <= 768 ? false : true
+    
+    const [openMenu, setOpenMenu] = useState(initialMenuState)
 
     return (
         <div className={classes.container}>
             <HashRouter>
                 <Header setOpenMenu={setOpenMenu} />
                 <section className={classes.body}>
-                    {openMenu && <Menu />}
+                    <Menu isOpen={openMenu} />
                     <section className={classes.content}>
                         <Routes>
                             <Route path='/' element={<News />} />

@@ -10,9 +10,16 @@ import WidgetIcon from '../../UI/icons/WidgetIcon';
 import MenuItem from '../MenuItem/MenuItem';
 import classes from './Menu.module.css'
 
-function Menu() {
+function Menu(props:{
+    isOpen: boolean;
+}) {
+
+    const { isOpen } = props
+    
+    const menuClassName = isOpen ? classes.menu : classes.closed
+    
     return (
-        <menu className={classes.menu}>
+        <menu className={menuClassName}>
             <h2 className={classes.title}>Меню</h2>
             <nav className={classes.nav}>
                 <ul className={classes.nav_list}>

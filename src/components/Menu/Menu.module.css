@@ -5,8 +5,10 @@
     top: 0;
     bottom: 0;
     overflow: auto;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgb(255, 255, 255);
     box-shadow: 0px 0px 5px rgba(2, 0, 96, 0.25);
+    transition: all;
+    transition-duration: 0.05s;
 }
 .title{
     margin: 1.2rem 1.6rem;
@@ -14,4 +16,16 @@
     font-size: 1rem;
     line-height: 1rem;
     color: #1c1c1e;
+}
+.closed{
+    width: 0px ;
+    opacity: 0;
+    overflow: hidden;
+}
+
+@media (max-width: 768px){
+    .menu{
+        position: absolute;
+        z-index: 2;
+    }
 }
