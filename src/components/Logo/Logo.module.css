@@ -8,9 +8,9 @@
     scale: 1.02;
 }
 .text {
-    margin-left: 24px;
+    margin-left: 1.2rem;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.2rem;
     color: #ffffff;
 }

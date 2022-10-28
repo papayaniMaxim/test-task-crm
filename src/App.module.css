@@ -4,7 +4,7 @@
 }
 .body{
     position: absolute;
-    top: 80px;
+    top: 4rem;
     bottom: 0;
     left: 0;
     right: 0;
@@ -17,4 +17,26 @@
     bottom: 0;
     width: 100%;
     overflow-y: auto;
+}
+@media (max-width: 480px){
+    html{
+        font-size: 14px;
+    }
+} 
+@media (min-width: 768px){
+    html{
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px){
+    html{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1440px){
+    html{
+        font-size: 20px;
+    }
 }
