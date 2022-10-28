@@ -1,10 +1,10 @@
 import { useLayoutEffect, useState } from 'react';
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import classes from './App.module.css';
 import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
-import News from './components/News/News';
-import SeachAddress from './components/SeachAddress/SeachAddress';
+import News from './pages/News/News';
+import SeachAddress from './pages/SeachAddress/SeachAddress';
 
 function App() {
     const [openMenu, setOpenMenu] = useState(true)

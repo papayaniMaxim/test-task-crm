@@ -51,3 +51,12 @@ h2 {
     padding: 16px 0;
     border-top: 1px solid #D7D7D7;;
 }
+@media (max-width:500px) {
+    .form {
+        flex-direction: column;
+    }
+    .input {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+}
