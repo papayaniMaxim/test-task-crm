@@ -23,14 +23,15 @@ function SeachAddress() {
     // Мемоизация будет полезна если подключить стейт менеджер типа Redux 
     // или использовать useContext c провайдером на App
     const suggestionsList = useMemo(() => {
-
+        if (loading) return <Loader />
+        if (!suggestions) return null
+        
         return (
+            
             <ul className={classes.list}> <h2>Адреса</h2>
-                {loading
-                    ? <Loader />
-                    : suggestions && suggestions.length > 0
+                {suggestions.length > 0
                         ? suggestions?.map(suggestion => <li key={suggestion.value}>{suggestion.value}</li>)
-                        : <li>Список пуст</li>}
+                        : <li>Не найдено</li>}
             </ul>
         )
 
