@@ -51,6 +51,12 @@ h2 {
     padding: 0.8rem 0;
     border-top: 1px solid #D7D7D7;;
 }
+.message{
+    color:red;
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
 @media (max-width:500px) {
     .form {
         flex-direction: column;

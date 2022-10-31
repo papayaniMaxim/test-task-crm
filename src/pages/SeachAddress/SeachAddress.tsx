@@ -12,7 +12,7 @@ function SeachAddress() {
 
     const buttonHandler: EventHandler<MouseEvent> = (e) => {
         e.preventDefault()
-        if (query.length > 3) {
+        if (query.length >= 3) {
             setLoading(() => true)
             getAddressPrompt(query)
                 .then((suggestions: RootObject) => setSuggestions(suggestions.suggestions))
@@ -25,17 +25,21 @@ function SeachAddress() {
     const suggestionsList = useMemo(() => {
         if (loading) return <Loader />
         if (!suggestions) return null
-        
+
         return (
-            
+
             <ul className={classes.list}> <h2>Адреса</h2>
                 {suggestions.length > 0
-                        ? suggestions?.map(suggestion => <li key={suggestion.value}>{suggestion.value}</li>)
-                        : <li>Не найдено</li>}
+                    ? suggestions?.map(suggestion => <li key={suggestion.value}>{suggestion.value}</li>)
+                    : <li>Не найдено</li>}
             </ul>
         )
 
     }, [suggestions, loading])
+
+    const validationMessage = query.length < 3 && query.length > 0
+        ? <span className={classes.message}>Запрос должен быть не менее трех символов</span>
+        : null
 
     return (
         <div className={classes.container}>
@@ -50,6 +54,8 @@ function SeachAddress() {
                     type="text" />
                 <button onClick={buttonHandler} className={classes.button}><SeachButtonIcon /> Поиск</button>
             </form>
+
+            {validationMessage}
 
             {suggestionsList}
 
