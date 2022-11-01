@@ -4,13 +4,17 @@
     align-items: center;
     cursor: pointer;
 }
-.container:hover{
-    scale: 1.02;
-}
 .text {
     margin-left: 1.2rem;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.2rem;
     color: #ffffff;
+}
+.dafaultLogo{
+    transition-duration: 1s;
+}
+.rotableLogo{
+    transform: rotate(360deg);
+    transition-duration: 1s;
 }

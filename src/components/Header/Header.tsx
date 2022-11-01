@@ -4,10 +4,11 @@ import Person from '../Person/Person';
 import classes from './Header.module.css'
 function Header(props: {
     setOpenMenu: Dispatch<SetStateAction<boolean>>;
+    openMenu: boolean;
 }) {
     return (
         <header className={classes.header}>
-            <Logo setOpenMenu={props.setOpenMenu} />
+            <Logo setOpenMenu={props.setOpenMenu} openMenu={props.openMenu} />
             <Person/>
         </header>
     );
