@@ -1,4 +1,4 @@
-import { memo, ReactElement, useState } from 'react';
+import {ReactElement, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ShevronIcon from '../../UI/icons/ShevronIcon';
 import classes from './MenuItem.module.css'
@@ -15,6 +15,7 @@ function MenuItem(props: {
     const location = useLocation()
     const isActive = location.pathname === path
     const handler = () => setOpenSubMenu(prev => !prev)
+    useEffect(()=>console.log('i am menu item ', text))
 
     return (
         <li>
@@ -45,4 +46,4 @@ function MenuItem(props: {
     );
 }
 
-export default memo(MenuItem);
+export default MenuItem;
