@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import FindIcon from '../../UI/icons/FindIcon';
 import MainPageIcon from '../../UI/icons/MainPageIcon';
 import MapIcon from '../../UI/icons/MapIcon';
@@ -10,16 +11,27 @@ import WidgetIcon from '../../UI/icons/WidgetIcon';
 import MenuItem from '../MenuItem/MenuItem';
 import classes from './Menu.module.css'
 
-function Menu(props:{
-    isOpen: boolean;
-}) {
-
-    const { isOpen } = props
+function Menu() {
     
-    const menuClassName = isOpen ? classes.menu : classes.closed
+    const initialMenuState = window.innerWidth <= 768 ? false : true
+    const [isOpen, setIsOpen] = useState<boolean>(initialMenuState)    
+    
+    useEffect(() => {
+        
+        window.addEventListener('resize', event => {   
+            setIsOpen(() => window.innerWidth <= 768 ? false : true)  
+        })
+
+        return () => {
+            window.removeEventListener('resize', event => {
+                setIsOpen(() => window.innerWidth <= 768 ? false : true)
+            })
+        }
+        
+    }, [])
     
     return (
-        <menu className={menuClassName}>
+        <menu className={isOpen ? classes.menu : classes.closed}>
             <h2 className={classes.title}>Меню</h2>
             <nav className={classes.nav}>
                 <ul className={classes.nav_list}>

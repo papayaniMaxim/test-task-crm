@@ -14,5 +14,4 @@ export default async function getAddressPrompt(query:string) {
 
     return fetch(url, options)
         .then(response => response.json())
-        .catch(error => console.log("error", error));
 }

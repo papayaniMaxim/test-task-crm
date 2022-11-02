@@ -1,4 +1,3 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import classes from './App.module.css';
 import Header from './components/Header/Header';
@@ -7,22 +6,13 @@ import News from './pages/News/News';
 import SeachAddress from './pages/SeachAddress/SeachAddress';
 
 function App() {
-    
-    const windowInnerWidth = window.innerWidth
-    const initialMenuState = windowInnerWidth <= 768 ? false : true
-    
-    const [openMenu, setOpenMenu] = useState(initialMenuState)
-
-    window.addEventListener('resize', event => {   
-        setOpenMenu(()=> windowInnerWidth <= 768 ? false : true )
-    })
 
     return (
         <div className={classes.container}>
             <HashRouter>
-                <Header setOpenMenu={setOpenMenu} openMenu={openMenu} />
+                <Header  />
                 <section className={classes.body}>
-                    <Menu isOpen={openMenu} />
+                    <Menu />
                     <section className={classes.content}>
                         <Routes>
                             <Route path='/' element={<News />} />

@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react';
+import { memo, ReactElement, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ShevronIcon from '../../UI/icons/ShevronIcon';
 import classes from './MenuItem.module.css'
@@ -45,4 +45,4 @@ function MenuItem(props: {
     );
 }
 
-export default MenuItem;
+export default memo(MenuItem);

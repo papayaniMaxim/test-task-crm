@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    cursor: default;
 }
 .text {
     margin-left: 1.2rem;
@@ -10,11 +10,4 @@
     font-size: 1rem;
     line-height: 1.2rem;
     color: #ffffff;
-}
-.dafaultLogo{
-    transition-duration: 1s;
-}
-.rotableLogo{
-    transform: rotate(360deg);
-    transition-duration: 1s;
 }
