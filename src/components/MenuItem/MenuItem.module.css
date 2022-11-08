@@ -1,42 +1,42 @@
-.text{
+.text {
     position: relative;
     font-size: 1rem;
     line-height: 1.2rem;
     font-weight: 600;
     color: black;
     padding-left: 4rem;
-    padding-right: 1rem; 
+    padding-right: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;   
+    justify-content: space-between;
 }
-.text:hover{
+.text:hover {
     background: #5027bf19;
 }
-.icon{
+.icon {
     position: absolute;
     left: 1.6rem;
 }
 
-.submenu{
+.submenu {
     padding-left: 1.6rem;
 }
-.marker{
+.marker {
     position: absolute;
     right: 0;
-    top:0.1rem;
+    top: 0.1rem;
     bottom: 0.1rem;
     width: 0.15rem;
-    background: #4F27BF;
+    background: #4f27bf;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
 }
-.shevronUp{
+.shevronUp {
     transition: 0.2s;
     transform: rotate(180deg);
 }
-.shevronDown{
+.shevronDown {
     transition: 0.2s;
 }

@@ -10,23 +10,23 @@
     transition: all;
     transition-duration: 0.1s;
 }
-.title{
+.title {
     margin: 1.2rem 1.6rem;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1rem;
     color: #1c1c1e;
 }
-.closed{
-    width: 0px ;
+.closed {
+    width: 0px;
     opacity: 0;
     overflow: hidden;
     transition: all;
     transition-duration: 0.1s;
 }
 
-@media (max-width: 768px){
-    .menu{
+@media (max-width: 768px) {
+    .menu {
         position: absolute;
         z-index: 2;
     }

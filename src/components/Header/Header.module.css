@@ -1,9 +1,9 @@
-.header{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background:#4F27BF;
+    background: #4f27bf;
     height: 4rem;
     padding: 0 1.6rem;
 }
