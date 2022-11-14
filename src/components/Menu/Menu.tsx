@@ -33,12 +33,12 @@ function Menu() {
         <ul className={classes.nav_list}>
           <MenuItem path="/" icon={<MainPageIcon />} text="Главная" />
           <MenuItem path="/address" icon={<FindIcon />} text="Поиск адресов" />
-          <MenuItem path="/#" icon={<TablesIcon />} text="Таблицы" />
+          <MenuItem path="/tables" icon={<TablesIcon />} text="Таблицы" />
           <MenuItem path="/#" icon={<ScheduleIcon />} text="Календарь" />
           <MenuItem path="/#" icon={<MapIcon />} text="Карты" />
           <MenuItem path="/#" icon={<WidgetIcon />} text="Виджеты" />
           <MenuItem
-            path="/#"
+            path="/settings"
             icon={<SettingsIcon />}
             text="Настройки"
             submenuItems={[

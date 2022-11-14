@@ -3,7 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: #4f27bf;
+    color: var(--text-color);
+    background: var(--header-background-color);
     height: 4rem;
     padding: 0 1.6rem;
+    transition: all 300ms;
 }

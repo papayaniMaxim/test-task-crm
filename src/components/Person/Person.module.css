@@ -8,5 +8,6 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.2rem;
-    color: #ffffff;
+    color: var(--header-text-color);
+    transition: all 500ms;
 }

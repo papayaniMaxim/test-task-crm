@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600;700;800;900&display=swap");
 .container {
     font-family: "Montserrat", sans-serif;
+    background-color: var(--bacground-color);
 }
 .body {
     position: absolute;
@@ -10,6 +11,7 @@
     right: 0;
     display: flex;
     flex-direction: row;
+    background-color: var(--bacground-color);
 }
 .content {
     position: relative;
@@ -17,6 +19,8 @@
     bottom: 0;
     width: 100%;
     overflow-y: auto;
+    padding: 32px;
+    background-color: var(--bacground-color);
 }
 @media (max-width: 480px) {
     html {
@@ -39,4 +43,28 @@
     html {
         font-size: 20px;
     }
+}
+
+html[data-theme="dark"] {
+    --main-color: #4f27bf;
+    --bacground-color: rgb(43, 48, 59);
+    --bacground-element-color: rgb(28, 31, 38);
+    --text-color: rgb(190, 190, 206);
+    --menu-hover-color: rgba(1, 0, 0, 0.772);
+    --header-text-color: var(--main-color);
+    --header-background-color: var(--bacground-element-color);
+    --input-bacground-color: rgb(20, 23, 28);
+    --button-text-color: var(--text-color)
+}
+html[data-theme="light"] {
+    --main-color: #4f27bf;
+    --bacground-color: rgb(255, 255, 255);
+    --bacground-element-color: rgb(255, 255, 255);
+    --text-color: #1c1c1e;
+    --menu-hover-color: rgba(79, 39, 187, 0.098);
+    --header-text-color: white;
+    --input-bacground-color: white;
+    --header-background-color: var(--main-color);
+    --button-text-color: var(--header-text-color)
+
 }

@@ -1,11 +1,11 @@
-.container {
-    padding: 32px;
-}
+
 h2 {
     font-weight: 700;
     font-size: 1.3rem;
     line-height: 1.6rem;
-    color: #1c1c1e;
+    color: var(--text-color);
+    transition: all 500ms;
+
 }
 p {
     margin-top: 1.2rem;
@@ -13,7 +13,8 @@ p {
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.2rem;
-    color: #1c1c1e;
+    color: var(--text-color);
+    transition: all 500ms;
 }
 .a {
     color: #002bc5;

@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ShevronIcon from "../../UI/icons/ShevronIcon";
 import classes from "./MenuItem.module.css";
@@ -16,7 +16,7 @@ function MenuItem(props: {
   const isActive = location.pathname === path;
   const handler = () => setOpenSubMenu((prev) => !prev);
 
-  return (
+    return (
     <li>
       <Link to={path} className={classes.text} onClick={handler}>
         <i className={classes.icon}>{icon}</i>

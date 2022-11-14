@@ -1,0 +1,11 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+.label{
+    color: var(--text-color);
+    transition: all 500ms;
+}
