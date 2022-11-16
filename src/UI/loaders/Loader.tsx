@@ -1,8 +1,13 @@
-function Loader() {
+interface IProps {
+  width?: string;
+  height?: string;
+}
+
+function Loader({ width, height }: IProps) {
   return (
     <svg
-      width={"4rem"}
-      height={"4rem"}
+      width={width || "4rem"}
+      height={height || "4rem"}
       version="1.1"
       id="L5"
       xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, HashRouter, Route, Routes, useLocation } from "react-router-dom";
 import classes from "./App.module.css";
 import Header from "./components/Header/Header";
 import Menu from "./components/Menu/Menu";
@@ -7,12 +8,13 @@ import News from "./pages/News/News";
 import SeachAddress from "./pages/SeachAddress/SeachAddress";
 import Settings from "./pages/Settings/Settings";
 import Tables from "./pages/Tables/Tables";
+import Widget from "./pages/Widgets/Widget";
 
 function App() {
-  useTheme()
-    return (
+    useTheme();
+  return (
     <div className={classes.container}>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <section className={classes.body}>
           <Menu />
@@ -22,10 +24,11 @@ function App() {
               <Route path="/address" element={<SeachAddress />} />
               <Route path="/tables/*" element={<Tables />} />
               <Route path="/settings/*" element={<Settings />} />
+              <Route path="/widgets/*" element={<Widget />} />
             </Routes>
           </section>
         </section>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

@@ -1,11 +1,13 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Button from "../../UI/Button/Button";
 import PopUp from "../../UI/PopUp/PopUp";
 import classes from "./Tables.module.css";
 
 function Tables() {
   const location = useLocation();
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+    const params = useParams()
+    console.log(params)
 
   return (
     <div className={classes.container}>

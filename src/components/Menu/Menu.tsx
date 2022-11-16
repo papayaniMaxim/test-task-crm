@@ -36,7 +36,7 @@ function Menu() {
           <MenuItem path="/tables" icon={<TablesIcon />} text="Таблицы" />
           <MenuItem path="/#" icon={<ScheduleIcon />} text="Календарь" />
           <MenuItem path="/#" icon={<MapIcon />} text="Карты" />
-          <MenuItem path="/#" icon={<WidgetIcon />} text="Виджеты" />
+          <MenuItem path="/widgets" icon={<WidgetIcon />} text="Виджеты" />
           <MenuItem
             path="/settings"
             icon={<SettingsIcon />}
